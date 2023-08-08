@@ -6,5 +6,14 @@ def main(data:str):
     Returns:
         list: return answer
     """
-    
+    rows = data.split('\n')
+    count = []
+    for row in rows:
+        len_row = len(row)
+        count.append(len_row)
+    return count
+
 # Read data from file
+file = open('data/data06.txt')
+f = file.read()
+print(main(f))
